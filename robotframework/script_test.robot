@@ -1,5 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library    seleniumlibrary
 
 *** Variables ***
 ${browser}    gc
