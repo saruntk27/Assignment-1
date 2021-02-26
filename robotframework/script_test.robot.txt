@@ -1,0 +1,28 @@
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+${browser}    gc
+${url}    https://www.google.co.th/
+${delay}    0.5
+
+
+*** Keywords ***
+Open Page
+    Open Browser    ${url}    ${browser}
+
+Delay
+    Set Selenium speed    ${delay}
+
+Location should be success
+    Location should be    ${url}
+    title should be    Google
+
+*** Test cases ***
+Testcase -1- Open Google
+    Open Page
+    Delay
+    Location should be success
+    [Teardown]    close browser
+
+
